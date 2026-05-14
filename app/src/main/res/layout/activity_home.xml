@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    tools:context=".Pertemuan_4.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:title="Dashboard DesaKu"
+            app:titleTextColor="@color/text_dark">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/logo_nobg"
+                android:contentDescription="Logo Desaku" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="80dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Welcome Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary_blue"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selamat Datang,"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvUserGreet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Penggerak Desa!"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Mari kelola data kependudukan dengan lebih mudah dan transparan."
+                        android:textColor="#E0E7FF"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Layanan Desa"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false">
+
+                <!-- Web Desaku Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardWebView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@android:drawable/ic_menu_view"
+                            app:tint="@color/primary_blue"
+                            android:contentDescription="Web" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Web Desaku"
+                            android:layout_marginTop="8dp"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_dark"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Potensi Desa Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPotensi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@android:drawable/ic_menu_gallery"
+                            app:tint="@color/primary_blue"
+                            android:contentDescription="Potensi" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Potensi Desa"
+                            android:layout_marginTop="8dp"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_dark"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Pelaporan Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardLapor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@android:drawable/ic_menu_edit"
+                            app:tint="@color/primary_blue"
+                            android:contentDescription="Lapor" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lapor Warga"
+                            android:layout_marginTop="8dp"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_dark"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Logout Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardLogout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@android:drawable/ic_lock_power_off"
+                            app:tint="#F44336"
+                            android:contentDescription="Keluar" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Keluar Akun"
+                            android:layout_marginTop="8dp"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#F44336"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:itemIconTint="@color/primary_blue"
+        app:itemTextColor="@color/primary_blue"
+        app:itemRippleColor="@color/success_bg"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu"
+        app:elevation="8dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabWhatsApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="80dp"
+        android:src="@android:drawable/stat_sys_phone_call"
+        app:backgroundTint="@color/success_green"
+        app:tint="@color/white"
+        android:contentDescription="WhatsApp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

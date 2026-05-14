@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Fajartime" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryDark">@color/deep_navy</item>
+        <item name="colorAccent">@color/primary_blue</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/bg_light</item>
+    </style>
+
+    <style name="Theme.Fajartime" parent="Base.Theme.Fajartime" />
+
+    <!-- Style untuk Foto Profil Bulat -->
+    <style name="CircleImage" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Theme.Fajartime.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

@@ -5,22 +5,31 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_light"
     tools:context=".Pertemuan_5.WebViewActivity">
+
+    <!-- Header Wave Artistik -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/bg_header_wave" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
+            android:background="@android:color/transparent"
+            app:navigationIcon="@drawable/baseline_arrow_back"
+            app:navigationIconTint="@color/white"
             app:title="Web DesaKu"
-            app:titleTextColor="@color/text_dark"
-            app:layout_scrollFlags="scroll|enterAlways"/>
+            app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -28,6 +37,7 @@
         android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="56dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 

@@ -15,4 +15,25 @@
     <string name="linkedin">LinkedIn</string>
     <string name="dont_have_account">Don\'t have an account? </string>
     <string name="sign_up">Sign Up</string>
+
+    <!-- Fitur Aplikasi -->
+    <string name="fitur_aplikasi">Fitur Aplikasi</string>
+    <string name="fitur_desaku">Fitur DesaKu</string>
+    <string name="web_desaku">Web DesaKu</string>
+    <string name="potensi_desa">Potensi Desa</string>
+    <string name="lapor_warga">Lapor Warga</string>
+    <string name="data_penduduk">Data Penduduk</string>
+    <string name="pengumuman">Pengumuman</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="logout">Logout / Keluar</string>
+    <!-- Profile labels -->
+    <string name="label_full_name">Full Name</string>
+    <string name="user_full_name">fajar farhan</string>
+    <string name="label_phone">Phone</string>
+    <string name="user_phone">085179797880</string>
+    <string name="content_desc_profile_image">Profile picture</string>
+    <string name="content_desc_edit">Edit</string>
+    <string name="content_desc_call">Call</string>
+    <string name="profile_title">Profil Pengguna</string>
+    <string name="content_desc_add">Add profile photo</string>
 </resources>

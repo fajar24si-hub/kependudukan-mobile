@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    tools:context=".Pertemuan_9.SettingsActivity">
+
+    <!-- Background Drawable (Header) -->
+    <View
+        android:id="@+id/headerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_header_wave"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/baseline_arrow_back"
+        app:title="Pengaturan Akun"
+        app:titleTextColor="@color/white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/btnSave"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- TextInputLayout -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Cari Pengaturan"
+                app:boxBackgroundColor="@color/white"
+                app:startIconDrawable="@android:drawable/ic_menu_search">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Chip & ChipGroup -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Kategori"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Semua" />
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Keamanan" />
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notifikasi" />
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Privasi" />
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+
+            <!-- GridLayout -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Akses Cepat"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"/>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:columnCount="2">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="12dp">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@android:drawable/ic_menu_myplaces"
+                            app:tint="@color/primary_blue" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mode Malam"
+                            android:textSize="12sp"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="12dp">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@android:drawable/ic_lock_idle_lock"
+                            app:tint="@color/primary_blue" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kunci Aplikasi"
+                            android:textSize="12sp"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.gridlayout.widget.GridLayout>
+
+            <!-- ListView (Custom Adapter) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Detail Pengaturan"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"/>
+
+            <ListView
+                android:id="@+id/listViewSettings"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="true"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                tools:listitem="@layout/item_settings" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- MaterialButton -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:text="SIMPAN PERUBAHAN"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

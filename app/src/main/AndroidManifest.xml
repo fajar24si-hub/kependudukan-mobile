@@ -64,6 +64,16 @@
             android:label="Kalkulator Bina Desa" />
 
         <activity
+            android:name=".Pertemuan_9.NinthActivity"
+            android:exported="false"
+            android:label="Pertemuan 9" />
+
+        <activity
+            android:name=".Pertemuan_9.SettingsActivity"
+            android:exported="false"
+            android:label="Settings" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/app_name" />

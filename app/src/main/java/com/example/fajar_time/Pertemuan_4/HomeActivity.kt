@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.fajar_time.Pertemuan_5.FifthActivity
 import com.example.fajar_time.Pertemuan_5.WebViewActivity
 import com.example.fajar_time.Pertemuan_3.LoginActivity
+import com.example.fajar_time.Pertemuan_9.NinthActivity
 import com.example.fajar_time.R
 import com.example.fajar_time.databinding.ActivityHomeBinding
 
@@ -64,6 +65,11 @@ class HomeActivity : AppCompatActivity() {
             intent.putExtra("PARENT_TITLE", "DesaKu")
             intent.putExtra("PARENT_DESC", "Layanan aspirasi dan pengaduan online.")
             startActivity(intent)
+        }
+
+        // Klik Card Pertemuan 9
+        binding.cardPertemuan9.setOnClickListener {
+            startActivity(Intent(this, NinthActivity::class.java))
         }
 
         binding.cardLogout.setOnClickListener {

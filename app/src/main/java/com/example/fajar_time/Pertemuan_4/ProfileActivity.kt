@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.fajar_time.Pertemuan_3.LoginActivity
+import com.example.fajar_time.Pertemuan_9.SettingsActivity
 import com.example.fajar_time.R
 import com.example.fajar_time.databinding.ActivityProfileBinding
 
@@ -64,6 +65,11 @@ class ProfileActivity : AppCompatActivity() {
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
+        }
+        // Open Settings from Profile (button moved here)
+        binding.btnSettings.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -4,7 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/bg_light">
+
+    <!-- Header Wave Artistik -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/bg_header_wave" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -16,9 +22,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
-            app:title="Edit Profile"
-            app:titleTextColor="@color/text_dark" />
+            android:background="@android:color/transparent"
+            app:title="@string/profile_title"
+            app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -35,7 +41,7 @@
             android:orientation="vertical"
             android:padding="24dp">
 
-            <!-- Profile Image Section with Plus Icon -->
+            <!-- Profile Image Section -->
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -48,17 +54,18 @@
                     android:layout_height="130dp"
                     android:padding="2dp"
                     android:src="@drawable/foto_profile"
-                    app:strokeColor="@color/input_border"
-                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="2dp"
                     app:shapeAppearanceOverlay="@style/CircleImage"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/content_desc_profile_image" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:layout_alignBottom="@id/ivProfilePicture"
                     android:layout_alignEnd="@id/ivProfilePicture"
-                    app:cardBackgroundColor="@color/black"
+                    app:cardBackgroundColor="@color/deep_navy"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp">
                     <ImageView
@@ -66,113 +73,70 @@
                         android:layout_height="match_parent"
                         android:padding="8dp"
                         android:src="@android:drawable/ic_input_add"
-                        app:tint="@color/white"
-                        android:contentDescription="Change Photo" />
+                        app:tint="@color/white" />
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
 
-            <!-- Profile Fields (Card Items) -->
-
-            <!-- Full Name -->
+            <!-- Full Name Card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="0.5dp"
-                app:cardBackgroundColor="@color/bg_light">
+                app:cardElevation="2dp">
                 <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
                     <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Full Name" android:textColor="@color/text_dark" android:textSize="12sp" android:textStyle="bold" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="fajar farhan" android:textColor="@color/text_grey" android:textSize="16sp" android:layout_marginTop="4dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_full_name" android:textColor="@color/primary_blue" android:textSize="12sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_full_name" android:textColor="@color/text_dark" android:textSize="16sp" android:layout_marginTop="4dp" />
                     </LinearLayout>
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:src="@android:drawable/ic_menu_edit" app:tint="@color/text_grey" />
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:src="@android:drawable/ic_menu_edit" app:tint="@color/text_grey" android:contentDescription="@string/content_desc_edit" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Nickname -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0.5dp"
-                app:cardBackgroundColor="@color/bg_light">
-                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nickname" android:textColor="@color/text_dark" android:textSize="12sp" android:textStyle="bold" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="fajar" android:textColor="@color/text_grey" android:textSize="16sp" android:layout_marginTop="4dp" />
-                    </LinearLayout>
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:src="@android:drawable/ic_menu_edit" app:tint="@color/text_grey" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Email -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0.5dp"
-                app:cardBackgroundColor="@color/bg_light">
-                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email" android:textColor="@color/text_dark" android:textSize="12sp" android:textStyle="bold" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="fajar24si@mahasiswa.pcr.ac.id" android:textColor="@color/text_grey" android:textSize="14sp" android:layout_marginTop="4dp" />
-                    </LinearLayout>
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:src="@android:drawable/ic_dialog_email" app:tint="@color/text_grey" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Phone -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0.5dp"
-                app:cardBackgroundColor="@color/bg_light">
-                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone" android:textColor="@color/text_dark" android:textSize="12sp" android:textStyle="bold" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="085179797880" android:textColor="@color/text_grey" android:textSize="16sp" android:layout_marginTop="4dp" />
-                    </LinearLayout>
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:src="@android:drawable/ic_menu_call" app:tint="@color/text_grey" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Address -->
+            <!-- Phone Card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="0.5dp"
-                app:cardBackgroundColor="@color/bg_light">
+                app:cardElevation="2dp">
                 <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_toStartOf="@+id/ivLocIcon" android:layout_alignParentStart="true" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Address" android:textColor="@color/text_dark" android:textSize="12sp" android:textStyle="bold" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="jalan sumber sari no.180, Pekanbaru" android:textColor="@color/text_grey" android:textSize="14sp" android:layout_marginTop="4dp" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_phone" android:textColor="@color/primary_blue" android:textSize="12sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_phone" android:textColor="@color/text_dark" android:textSize="16sp" android:layout_marginTop="4dp" />
                     </LinearLayout>
-                    <ImageView android:id="@+id/ivLocIcon" android:layout_width="20dp" android:layout_height="20dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:src="@android:drawable/ic_menu_mylocation" app:tint="@color/text_grey" />
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:src="@android:drawable/ic_menu_call" app:tint="@color/text_grey" android:contentDescription="@string/content_desc_call" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- Settings Button (moved from fitur screen) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSettings"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/pengaturan"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/primary_blue"
+                android:textColor="@color/white"
+                app:icon="@android:drawable/ic_menu_preferences"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:cornerRadius="12dp" />
+
             <!-- Logout Button -->
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="60dp"
                 android:backgroundTint="#F44336"
-                android:text="Logout / Keluar"
-                android:textAllCaps="false"
+                android:text="@string/logout"
                 android:textStyle="bold"
                 app:cornerRadius="12dp" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"

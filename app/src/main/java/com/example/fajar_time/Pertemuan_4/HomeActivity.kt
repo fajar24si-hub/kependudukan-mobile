@@ -8,6 +8,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.fajar_time.Pertemuan_10.TenthActivity
 import com.example.fajar_time.Pertemuan_5.FifthActivity
 import com.example.fajar_time.Pertemuan_5.WebViewActivity
 import com.example.fajar_time.Pertemuan_3.LoginActivity
@@ -70,6 +71,10 @@ class HomeActivity : AppCompatActivity() {
         // Klik Card Pertemuan 9
         binding.cardPertemuan9.setOnClickListener {
             startActivity(Intent(this, NinthActivity::class.java))
+        }
+
+        binding.cardPertemuan10.setOnClickListener {
+            startActivity(Intent(this, TenthActivity::class.java))
         }
 
         binding.cardLogout.setOnClickListener {

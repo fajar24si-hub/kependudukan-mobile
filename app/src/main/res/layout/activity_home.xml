@@ -304,6 +304,45 @@
 
             </GridLayout>
 
+            <!-- Section: Berita Terkini -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Berita Terkini"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Loading Indicator -->
+            <ProgressBar
+                android:id="@+id/pbBeritaLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible" />
+
+            <!-- Error Message -->
+            <TextView
+                android:id="@+id/tvBeritaError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gagal memuat berita. Periksa koneksi internet."
+                android:textColor="@color/text_grey"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:padding="16dp" />
+
+            <!-- RecyclerView Berita -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginBottom="8dp" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

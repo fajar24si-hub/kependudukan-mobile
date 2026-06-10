@@ -32,6 +32,9 @@
             android:name=".Pertemuan_3.LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".Message.OnBoarding.OnBoardingActivity"
+            android:exported="false" />
+        <activity
             android:name=".Pertemuan_5.WebViewActivity"
             android:exported="false" />
         <activity
